@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RashisCodeRiff.API", "RashisCodeRiff.API\RashisCodeRiff.API.csproj", "{022077D2-2DE8-47DD-87D3-801FE8EE00D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{022077D2-2DE8-47DD-87D3-801FE8EE00D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{022077D2-2DE8-47DD-87D3-801FE8EE00D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{022077D2-2DE8-47DD-87D3-801FE8EE00D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{022077D2-2DE8-47DD-87D3-801FE8EE00D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B872483D-D140-40E0-BD7F-1559BD3B1BC6}
+	EndGlobalSection
+EndGlobal
