@@ -1,4 +1,5 @@
-﻿using RashisCodeRiff.API.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using RashisCodeRiff.API.Data;
 using RashisCodeRiff.API.Models.Domain;
 using RashisCodeRiff.API.Repositories.Interface;
 
@@ -18,6 +19,11 @@ namespace RashisCodeRiff.API.Repositories.Implementation
             await dbContext.Categories.AddAsync(category);
             await dbContext.SaveChangesAsync();
             return category;
+        }
+
+        public async Task<IEnumerable<Category>> GetAllAsync()
+        {
+            return await dbContext.Categories.ToListAsync();
         }
     }
 }
