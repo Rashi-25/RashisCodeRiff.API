@@ -18,7 +18,9 @@ namespace RashisCodeRiff.API.Controllers
         {
             this.categoryRepository = categoryRepository;
         }
+
         [HttpPost]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> CreateCategory(CreateCategoryRequestDto request)
         {
             var category = new Category
@@ -39,6 +41,8 @@ namespace RashisCodeRiff.API.Controllers
             return Ok(response);
 
         }
+
+        // GET https://localhost:xxxx/api/Categories
         [HttpGet]
         public async Task<IActionResult> GetAllCategories()
         {
@@ -59,6 +63,8 @@ namespace RashisCodeRiff.API.Controllers
 
             return Ok(response);
         }
+
+        // GET: https://localhost:xxxx/api/categories/{id}
         [HttpGet]
         [Route("{id:Guid}")]
         public async Task<IActionResult> GetCategoryById([FromRoute] Guid id)
@@ -80,8 +86,11 @@ namespace RashisCodeRiff.API.Controllers
             return Ok(response);
         }
 
+
+        // PUT: https://localhost:xxx/api/categories/{id}
         [HttpPut]
         [Route("{id:Guid}")]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> EditCategory([FromRoute] Guid id, UpdateCategoryRequestDto request)
         {
             // Convert DTO to Domain Model
@@ -109,8 +118,11 @@ namespace RashisCodeRiff.API.Controllers
 
             return Ok(response);
         }
+
+        // DELETE: https://localhost:xxxx/api/categories/{id}
         [HttpDelete]
         [Route("{id:Guid}")]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> DeleteCategory([FromRoute] Guid id)
         {
             var category = await categoryRepository.DeleteAsync(id);

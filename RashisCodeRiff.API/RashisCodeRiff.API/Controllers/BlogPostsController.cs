@@ -21,7 +21,9 @@ namespace RashisCodeRiff.API.Controllers
             this.categoryRepository = categoryRepository;
         }
 
+        // POST: {baseApiurl}/api/blogposts
         [HttpPost]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> CreateBlogPost([FromBody] CreateBlogPostRequestDto request)
         {
             // Convert DTO to DOmain
@@ -72,6 +74,8 @@ namespace RashisCodeRiff.API.Controllers
 
             return Ok(response);
         }
+
+        // GET: {baseApiurl}/api/blogposts
         [HttpGet]
         public async Task<IActionResult> GetAllBlogPosts()
         {
@@ -104,6 +108,7 @@ namespace RashisCodeRiff.API.Controllers
             return Ok(response);
         }
 
+        // GET: {baseApiurl}/api/blogposts/{id}
         [HttpGet]
         [Route("{id:Guid}")]
         public async Task<IActionResult> GetBlogPostById([FromRoute] Guid id)
@@ -139,6 +144,7 @@ namespace RashisCodeRiff.API.Controllers
             return Ok(response);
         }
 
+        // GET: {baseApiurl}/api/blogPosts/{urlhandle}
         [HttpGet]
         [Route("{urlHandle}")]
         public async Task<IActionResult> GetBlogPostByUrlHandle([FromRoute] string urlHandle)
@@ -174,8 +180,10 @@ namespace RashisCodeRiff.API.Controllers
             return Ok(response);
         }
 
+        // PUT: {baseApiurl}/api/blogposts/{id}
         [HttpPut]
         [Route("{id:Guid}")]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> UpdateBlogPostById([FromRoute] Guid id, UpdateBlogPostRequestDto request)
         {
             // Convert DTO to Domain Model
@@ -235,8 +243,11 @@ namespace RashisCodeRiff.API.Controllers
 
             return Ok(response);
         }
+
+        // DELETE: {baseApiurl}/api/blogposts/{id}
         [HttpDelete]
         [Route("{id:Guid}")]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> DeleteBlogPost([FromRoute] Guid id)
         {
             var deletedBlogPost = await blogPostRepository.DeleteAsync(id);
