@@ -21,12 +21,12 @@ namespace RashisCodeRiff.API.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Writer")]
-        public async Task<IActionResult> CreateCategory(CreateCategoryRequestDto request)
+        public async Task<IActionResult> CreateCategory([FromBody] CreateCategoryRequestDto request)
         {
             var category = new Category
             {
                 Name = request.Name,
-                UrlHandle = request.UrlHandle,
+                UrlHandle = request.UrlHandle
             };
 
             await categoryRepository.CreateAsync(category);
