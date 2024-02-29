@@ -17,7 +17,7 @@ namespace RashisCodeRiff.API.Migrations.AuthDb
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.8")
+                .HasAnnotation("ProductVersion", "7.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -159,15 +159,15 @@ namespace RashisCodeRiff.API.Migrations.AuthDb
                         {
                             Id = "05909658-11c8-4c03-851d-cf47f8d73681",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "98366529-bd36-4bc9-b3c9-38df51b5ed60",
+                            ConcurrencyStamp = "c242f3c8-480a-459a-b7ac-ec1a4a323bab",
                             Email = "admin@rashiscoderiff.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@RASHISCODERIFF.COM",
                             NormalizedUserName = "ADMIN@RASHISCODERIFF.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEEDRdoOArf6figeRizN5i/i8q/yCaayPiSaJMG0ZGzVOFqqrSiGX6W2v4Cimo6zGbw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJUb3NhOYa7YuciyMdlJ2wMSEtxHCTHI95v+twKmzVzQeFwlxAWeO9WsqQdagtT+JA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1a918507-5886-4409-925a-f56696fa8ecc",
+                            SecurityStamp = "a7473e8c-d21c-4406-aa4b-ab6d61450e29",
                             TwoFactorEnabled = false,
                             UserName = "admin@rashiscoderiff.com"
                         });

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace RashisCodeRiff.API.Migrations.AuthDb
 {
     /// <inheritdoc />
-    public partial class InitialMigrationforAuth : Migration
+    public partial class InitialAuthDbCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -170,7 +170,7 @@ namespace RashisCodeRiff.API.Migrations.AuthDb
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "05909658-11c8-4c03-851d-cf47f8d73681", 0, "98366529-bd36-4bc9-b3c9-38df51b5ed60", "admin@rashiscoderiff.com", false, false, null, "ADMIN@RASHISCODERIFF.COM", "ADMIN@RASHISCODERIFF.COM", "AQAAAAIAAYagAAAAEEDRdoOArf6figeRizN5i/i8q/yCaayPiSaJMG0ZGzVOFqqrSiGX6W2v4Cimo6zGbw==", null, false, "1a918507-5886-4409-925a-f56696fa8ecc", false, "admin@rashiscoderiff.com" });
+                values: new object[] { "05909658-11c8-4c03-851d-cf47f8d73681", 0, "c242f3c8-480a-459a-b7ac-ec1a4a323bab", "admin@rashiscoderiff.com", false, false, null, "ADMIN@RASHISCODERIFF.COM", "ADMIN@RASHISCODERIFF.COM", "AQAAAAIAAYagAAAAEJUb3NhOYa7YuciyMdlJ2wMSEtxHCTHI95v+twKmzVzQeFwlxAWeO9WsqQdagtT+JA==", null, false, "a7473e8c-d21c-4406-aa4b-ab6d61450e29", false, "admin@rashiscoderiff.com" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",

@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/RashisCodeRiffAPI/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsRashiCodeRiffConnection_AC7938EB5E",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/coderiffdbdbserver/databases/CodeRiffDb",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:RashiCodeRiffConnectionString",
+      "dynamicId": null
+    }
+  }
+}

@@ -12,15 +12,15 @@ using RashisCodeRiff.API.Data;
 namespace RashisCodeRiff.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240116075956_Adding BlogImage Domain Model")]
-    partial class AddingBlogImageDomainModel
+    [Migration("20240228135714_InitialApplicationDbCreate")]
+    partial class InitialApplicationDbCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.5")
+                .HasAnnotation("ProductVersion", "7.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
