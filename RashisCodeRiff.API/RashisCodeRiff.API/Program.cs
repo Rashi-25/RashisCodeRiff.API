@@ -10,7 +10,7 @@ using RashisCodeRiff.API.Repositories.Interface;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+//CHECK
 builder.Services.AddControllers();
 builder.Services.AddHttpContextAccessor();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
